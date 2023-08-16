@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let todo of todos$ | async">
+    <input type="checkbox" [checked]="todo.completed" />
+    {{ todo.text }}
+  </li>
+</ul>
