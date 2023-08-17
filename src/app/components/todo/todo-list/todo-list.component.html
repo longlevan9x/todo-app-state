@@ -1,6 +1,7 @@
 <ul>
   <li *ngFor="let todo of todos$ | async">
-    <input type="checkbox" [checked]="todo.completed" />
+    <input type="checkbox" [checked]="todo.completed" (change)="onToggleTodo(todo.id)" />
     {{ todo.text }}
+    <button (click)="onRemoveTodo(todo.id)">Remove</button>
   </li>
 </ul>
